@@ -8,17 +8,17 @@ const slides = [
   {
     id: 1,
     image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1800&q=90',
-    line: 'Wear the sun.',
+    line: 'Vista o sol.',
   },
   {
     id: 2,
     image: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1800&q=90',
-    line: 'Move like water.',
+    line: 'Mova-se como a água.',
   },
   {
     id: 3,
     image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1800&q=90',
-    line: 'Built on light.',
+    line: 'Feito de luz.',
   },
 ];
 
@@ -104,7 +104,7 @@ export default function HeroSlider() {
 
         {/* Scroll cue */}
         <div className="flex flex-col items-center gap-2">
-          <span className="text-[#F5F1E8]/40 text-[8px] tracking-[0.4em] uppercase">Scroll</span>
+          <span className="text-[#F5F1E8]/40 text-[8px] tracking-[0.4em] uppercase">Rolar</span>
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}

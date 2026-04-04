@@ -22,9 +22,9 @@ export interface Product {
   washing: string;
 }
 
-export type Category = 'All' | 'Legging' | 'Top' | 'Set';
+export type Category = 'Todos' | 'Legging' | 'Top' | 'Set';
 
-export const categories: Category[] = ['All', 'Legging', 'Top', 'Set'];
+export const categories: Category[] = ['Todos', 'Legging', 'Top', 'Set'];
 
 export const products: Product[] = [
 

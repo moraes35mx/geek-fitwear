@@ -34,12 +34,12 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Reveal>
             <p className="font-serif font-light italic text-[#1A1A1A] text-2xl md:text-3xl lg:text-4xl leading-relaxed tracking-wide">
-              "Crafted where the sun meets stone —<br />
-              for bodies that move with intention."
+              "Feito onde o sol encontra a pedra —<br />
+              para corpos que se movem com intenção."
             </p>
             <div className="flex items-center justify-center gap-4 mt-8">
               <div className="h-px w-12 bg-[#C2A27C]" />
-              <span className="text-[#6F6A5F] text-[9px] tracking-[0.4em] uppercase">GreekFit · SS 2025</span>
+              <span className="text-[#6F6A5F] text-[9px] tracking-[0.4em] uppercase">GreekFit · Coleção 2025</span>
               <div className="h-px w-12 bg-[#C2A27C]" />
             </div>
           </Reveal>
@@ -51,7 +51,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Reveal>
             <p className="text-[#6F6A5F] text-[9px] tracking-[0.45em] uppercase text-center mb-14">
-              The Line
+              A Linha
             </p>
           </Reveal>
 
@@ -70,7 +70,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-7 left-7">
                   <p className="text-[#F5F1E8] text-[9px] tracking-[0.35em] uppercase mb-1 opacity-80">Legging</p>
-                  <p className="text-[#F5F1E8] font-serif font-light italic text-2xl">Aegean Line</p>
+                  <p className="text-[#F5F1E8] font-serif font-light italic text-2xl">Linha Aegean</p>
                 </div>
               </Link>
             </Reveal>
@@ -87,7 +87,7 @@ export default function HomePage() {
                   />
                   <div className="absolute bottom-5 left-5">
                     <p className="text-[#F5F1E8] text-[9px] tracking-[0.35em] uppercase mb-0.5 opacity-80">Top</p>
-                    <p className="text-[#F5F1E8] font-serif font-light italic text-xl">Island Series</p>
+                    <p className="text-[#F5F1E8] font-serif font-light italic text-xl">Série Island</p>
                   </div>
                 </Link>
               </Reveal>
@@ -101,7 +101,7 @@ export default function HomePage() {
                     style={{ filter: 'saturate(0.85) brightness(0.95) sepia(0.05)' }}
                   />
                   <div className="absolute bottom-5 left-5">
-                    <p className="text-[#F5F1E8] text-[9px] tracking-[0.35em] uppercase mb-0.5 opacity-80">Set</p>
+                    <p className="text-[#F5F1E8] text-[9px] tracking-[0.35em] uppercase mb-0.5 opacity-80">Conjunto</p>
                     <p className="text-[#F5F1E8] font-serif font-light italic text-xl">Santorini</p>
                   </div>
                 </Link>
@@ -137,21 +137,21 @@ export default function HomePage() {
             <Reveal delay={0.15} className="flex items-center px-10 py-20 lg:px-20">
               <div>
                 <p className="text-[#6F6A5F] text-[9px] tracking-[0.45em] uppercase mb-10">
-                  SS 2025 Campaign
+                  Campanha 2025
                 </p>
                 <h2 className="font-serif font-light italic text-[#1A1A1A] text-4xl md:text-5xl leading-tight mb-8">
-                  Where stone<br />meets sea.
+                  Onde a pedra<br />encontra o mar.
                 </h2>
                 <p className="text-[#6F6A5F] font-light text-sm leading-loose max-w-sm mb-10">
-                  Inspired by the raw architecture of the Aegean coast.
-                  Each piece carries the silence of limestone, the warmth
-                  of terracotta, and the freedom of open water.
+                  Inspirada na arquitetura crua da costa Egeia.
+                  Cada peça carrega o silêncio do calcário, o calor
+                  da terracota e a liberdade das águas abertas.
                 </p>
                 <Link
                   href="#collection"
                   className="text-[#A88F6A] text-[9px] tracking-[0.35em] uppercase border-b border-[#A88F6A]/40 hover:border-[#A88F6A] pb-1 transition-colors"
                 >
-                  Explore the collection
+                  Explorar a coleção
                 </Link>
               </div>
             </Reveal>
@@ -163,15 +163,15 @@ export default function HomePage() {
       <section id="philosophy" className="bg-[#2B2B2B] py-32">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Reveal>
-            <p className="text-[#C2A27C] text-[9px] tracking-[0.5em] uppercase mb-12">Our Philosophy</p>
+            <p className="text-[#C2A27C] text-[9px] tracking-[0.5em] uppercase mb-12">Nossa Filosofia</p>
             <h2 className="font-serif font-light italic text-[#F5F1E8] text-4xl md:text-5xl lg:text-6xl leading-tight mb-10">
-              The body is not a machine.<br />It is a landscape.
+              O corpo não é uma máquina.<br />É uma paisagem.
             </h2>
             <p className="text-[#8C7A5B] font-light text-sm leading-loose max-w-xl mx-auto">
-              GreekFit was born from a belief that movement is sacred.
-              That what you wear during your practice should honor the
-              intelligence of your body — not restrict it. We craft with
-              precision, design with restraint, and source with care.
+              A GreekFit nasceu da crença de que o movimento é sagrado.
+              Que o que você veste durante sua prática deve honrar a
+              inteligência do seu corpo — não limitá-la. Criamos com
+              precisão, desenhamos com contenção e produzimos com cuidado.
             </p>
             <div className="flex items-center justify-center gap-4 mt-14">
               <div className="h-px w-10 bg-[#C2A27C]/40" />
@@ -192,14 +192,14 @@ export default function HomePage() {
             <div className="col-span-2 md:col-span-1">
               <p className="font-serif font-light italic text-[#1A1A1A] text-xl mb-4">GreekFit</p>
               <p className="text-[#6F6A5F] text-[10px] leading-relaxed font-light max-w-[180px]">
-                Premium fitness wear. Mediterranean light. Brazilian energy.
+                Roupas fitness premium. Luz mediterrânea. Energia brasileira.
               </p>
             </div>
 
             {[
-              { title: 'Shop', links: ['Collection', 'New Arrivals', 'Sale', 'Gift Cards'] },
-              { title: 'Help', links: ['Sizing Guide', 'Shipping', 'Returns', 'Contact'] },
-              { title: 'Company', links: ['Philosophy', 'Sustainability', 'Press', 'Careers'] },
+              { title: 'Loja', links: ['Coleção', 'Novidades', 'Outlet', 'Gift Cards'] },
+              { title: 'Ajuda', links: ['Guia de Tamanhos', 'Entrega', 'Devoluções', 'Contato'] },
+              { title: 'Empresa', links: ['Filosofia', 'Sustentabilidade', 'Imprensa', 'Carreiras'] },
             ].map(col => (
               <div key={col.title}>
                 <p className="text-[#1A1A1A] text-[9px] tracking-[0.3em] uppercase mb-5 font-medium">{col.title}</p>
@@ -219,7 +219,7 @@ export default function HomePage() {
           {/* Bottom */}
           <div className="border-t border-[#E6DFD2] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-[#6F6A5F] text-[9px] tracking-[0.2em] font-light">
-              © 2025 GreekFit. All rights reserved.
+              © 2025 GreekFit. Todos os direitos reservados.
             </p>
             <div className="flex items-center gap-6">
               {['Instagram', 'TikTok', 'Pinterest'].map(s => (

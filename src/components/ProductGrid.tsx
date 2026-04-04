@@ -9,14 +9,14 @@ import ProductCard from './ProductCard';
 type SortOption = 'featured' | 'low' | 'high' | 'new';
 
 const sortLabels: Record<SortOption, string> = {
-  featured: 'Featured',
-  low: 'Price: Low',
-  high: 'Price: High',
-  new: 'Newest',
+  featured: 'Destaques',
+  low: 'Menor preço',
+  high: 'Maior preço',
+  new: 'Novidades',
 };
 
 export default function ProductGrid() {
-  const [cat, setCat] = useState<Category>('All');
+  const [cat, setCat] = useState<Category>('Todos');
   const [sort, setSort] = useState<SortOption>('featured');
   const [sortOpen, setSortOpen] = useState(false);
   const [sizes, setSizes] = useState<string[]>([]);
@@ -26,7 +26,7 @@ export default function ProductGrid() {
 
   const filtered = useMemo(() => {
     let list = [...products];
-    if (cat !== 'All') list = list.filter(p => p.category === cat);
+    if (cat !== 'Todos') list = list.filter(p => p.category === cat);
     if (sizes.length) list = list.filter(p => p.sizes.some(s => sizes.includes(s)));
     if (sort === 'low') list.sort((a, b) => a.pixPrice - b.pixPrice);
     if (sort === 'high') list.sort((a, b) => b.pixPrice - a.pixPrice);
@@ -43,11 +43,11 @@ export default function ProductGrid() {
           <div>
             <p className="text-[#6F6A5F] text-[9px] tracking-[0.45em] uppercase mb-2">GreekFit</p>
             <h2 className="font-serif font-light text-[#1A1A1A] text-4xl md:text-5xl italic">
-              The Collection
+              A Coleção
             </h2>
           </div>
           <p className="text-[#6F6A5F] text-[10px] tracking-wide hidden sm:block">
-            {filtered.length} pieces
+            {filtered.length} peças
           </p>
         </div>
 
@@ -129,12 +129,12 @@ export default function ProductGrid() {
         </div>
 
         {/* Active filters */}
-        {(cat !== 'All' || sizes.length > 0) && (
+        {(cat !== 'Todos' || sizes.length > 0) && (
           <div className="flex items-center gap-2 mb-8 flex-wrap">
-            {cat !== 'All' && (
+            {cat !== 'Todos' && (
               <span className="flex items-center gap-1.5 border border-[#E6DFD2] px-3 py-1.5 text-[9px] tracking-[0.2em] uppercase text-[#6F6A5F]">
                 {cat}
-                <button onClick={() => setCat('All')} className="hover:text-[#1A1A1A] ml-1">
+                <button onClick={() => setCat('Todos')} className="hover:text-[#1A1A1A] ml-1">
                   <X className="w-2.5 h-2.5" />
                 </button>
               </span>
@@ -154,9 +154,9 @@ export default function ProductGrid() {
         <AnimatePresence mode="wait">
           {filtered.length === 0 ? (
             <motion.div key="empty" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="py-32 text-center">
-              <p className="text-[#6F6A5F] text-sm tracking-wide font-light">No pieces found.</p>
-              <button onClick={() => { setCat('All'); setSizes([]); }} className="text-[#A88F6A] text-[9px] tracking-[0.25em] uppercase mt-4 hover:text-[#8C7A5B]">
-                Clear filters
+              <p className="text-[#6F6A5F] text-sm tracking-wide font-light">Nenhuma peça encontrada.</p>
+              <button onClick={() => { setCat('Todos'); setSizes([]); }} className="text-[#A88F6A] text-[9px] tracking-[0.25em] uppercase mt-4 hover:text-[#8C7A5B]">
+                Limpar filtros
               </button>
             </motion.div>
           ) : (

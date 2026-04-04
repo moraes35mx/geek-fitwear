@@ -41,16 +41,16 @@ export default function ProductPage({ params }: Props) {
 
   const accordionItems = [
     {
-      id: 'details', label: 'Product Details',
+      id: 'details', label: 'Detalhes do Produto',
       content: <p className="text-[#6F6A5F] text-xs font-light leading-relaxed">{product.details}</p>,
     },
     {
-      id: 'sizing', label: 'Size Guide',
+      id: 'sizing', label: 'Guia de Tamanhos',
       content: (
         <table className="w-full text-xs">
           <thead>
             <tr className="border-b border-[#E6DFD2]">
-              {['Size', 'Waist (cm)', 'Hip (cm)', 'Length (cm)'].map(h => (
+              {['Tam.', 'Cintura (cm)', 'Quadril (cm)', 'Comprimento (cm)'].map(h => (
                 <th key={h} className="text-left pb-3 text-[#6F6A5F] font-light">{h}</th>
               ))}
             </tr>
@@ -67,7 +67,7 @@ export default function ProductPage({ params }: Props) {
       ),
     },
     {
-      id: 'care', label: 'Care Instructions',
+      id: 'care', label: 'Cuidados com a Peça',
       content: <p className="text-[#6F6A5F] text-xs font-light leading-relaxed">{product.washing}</p>,
     },
   ];
@@ -80,7 +80,7 @@ export default function ProductPage({ params }: Props) {
         <nav className="flex items-center gap-2 text-[9px] tracking-[0.2em] uppercase mb-14">
           <Link href="/" className="text-[#6F6A5F] hover:text-[#1A1A1A] transition-colors flex items-center gap-1.5 group">
             <ArrowLeft className="w-3 h-3 group-hover:-translate-x-0.5 transition-transform" strokeWidth={1.3} />
-            Back
+            Voltar
           </Link>
           <span className="text-[#E6DFD2]">/</span>
           <span className="text-[#6F6A5F]">{product.category}</span>
@@ -137,7 +137,7 @@ export default function ProductPage({ params }: Props) {
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 text-[#A88F6A] fill-[#A88F6A]" />)}
               </div>
-              <span className="text-[#6F6A5F] text-[10px] font-light">4.9 · 127 reviews</span>
+              <span className="text-[#6F6A5F] text-[10px] font-light">4.9 · 127 avaliações</span>
             </div>
 
             {/* Price */}
@@ -154,14 +154,14 @@ export default function ProductPage({ params }: Props) {
                 <span className="text-[#A88F6A] text-[9px] tracking-[0.25em] uppercase">Pix {discount > 0 ? `· -${discount}%` : ''}</span>
               </div>
               <p className="text-[#6F6A5F] font-light text-sm">
-                or {product.installments.count}× R$ {product.installments.value.toFixed(2).replace('.', ',')} interest-free
+                ou {product.installments.count}× R$ {product.installments.value.toFixed(2).replace('.', ',')} sem juros
               </p>
             </div>
 
             {/* Color */}
             <div>
               <p className="text-[#6F6A5F] text-[9px] tracking-[0.3em] uppercase mb-4">
-                Color — <span className="text-[#1A1A1A]">{color.name}</span>
+                Cor — <span className="text-[#1A1A1A]">{color.name}</span>
               </p>
               <div className="flex items-center gap-3">
                 {product.colors.map((c, i) => (
@@ -184,13 +184,13 @@ export default function ProductPage({ params }: Props) {
             <div>
               <div className="flex items-center justify-between mb-4">
                 <p className={`text-[9px] tracking-[0.3em] uppercase font-medium ${sizeError ? 'text-red-400' : 'text-[#6F6A5F]'}`}>
-                  {sizeError ? 'Please select a size' : 'Size'}
+                  {sizeError ? 'Selecione um tamanho' : 'Tamanho'}
                 </p>
                 <button
                   onClick={() => setAccordion(accordion === 'sizing' ? null : 'sizing')}
                   className="text-[#A88F6A] text-[9px] tracking-[0.2em] uppercase border-b border-[#A88F6A]/30 hover:border-[#A88F6A] transition-colors pb-0.5"
                 >
-                  Size guide
+                  Guia de tamanhos
                 </button>
               </div>
               <div className="flex gap-2 flex-wrap">
@@ -223,7 +223,7 @@ export default function ProductPage({ params }: Props) {
                   : 'bg-[#E6DFD2] text-[#6F6A5F] cursor-not-allowed'
               }`}
             >
-              {added ? <><Check className="w-4 h-4" strokeWidth={1.5} /> Added to Bag</> : 'Add to Bag'}
+              {added ? <><Check className="w-4 h-4" strokeWidth={1.5} /> Adicionado!</> : 'Adicionar à Sacola'}
             </button>
 
             {/* Description */}
@@ -235,17 +235,17 @@ export default function ProductPage({ params }: Props) {
             <div className="flex items-center gap-6 text-[9px] text-[#6F6A5F] tracking-[0.15em] uppercase font-light">
               <div className="flex items-center gap-1.5">
                 <Shield className="w-3 h-3" strokeWidth={1.3} />
-                Secure
+                Compra Segura
               </div>
               <div className="flex items-center gap-1.5">
                 <Truck className="w-3 h-3" strokeWidth={1.3} />
-                Free over R$ 299
+                Frete grátis acima de R$ 299
               </div>
             </div>
 
             {/* Freight */}
             <div className="border-t border-[#E6DFD2] pt-6">
-              <p className="text-[#6F6A5F] text-[9px] tracking-[0.3em] uppercase mb-4">Calculate Shipping</p>
+              <p className="text-[#6F6A5F] text-[9px] tracking-[0.3em] uppercase mb-4">Calcular Frete</p>
               <div className="flex gap-2">
                 <input
                   type="text" placeholder="CEP 00000-000" maxLength={9} value={cep}
@@ -253,7 +253,7 @@ export default function ProductPage({ params }: Props) {
                   className="flex-1 bg-transparent border-b border-[#E6DFD2] focus:border-[#A88F6A] px-0 py-2 text-[#1A1A1A] text-xs font-light placeholder-[#E6DFD2] focus:outline-none transition-colors"
                 />
                 <button className="text-[#A88F6A] text-[9px] tracking-[0.25em] uppercase border-b border-[#A88F6A]/30 hover:border-[#A88F6A] pb-2 transition-colors">
-                  Check
+                  Calcular
                 </button>
               </div>
             </div>
@@ -305,8 +305,8 @@ export default function ProductPage({ params }: Props) {
           <div className="mt-28 border-t border-[#E6DFD2] pt-16">
             <div className="flex items-end justify-between mb-12">
               <div>
-                <p className="text-[#6F6A5F] text-[9px] tracking-[0.4em] uppercase mb-2">You may also like</p>
-                <h2 className="font-serif font-light italic text-[#1A1A1A] text-3xl">More {product.category}</h2>
+                <p className="text-[#6F6A5F] text-[9px] tracking-[0.4em] uppercase mb-2">Você também pode gostar</p>
+                <h2 className="font-serif font-light italic text-[#1A1A1A] text-3xl">Mais {product.category}</h2>
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">

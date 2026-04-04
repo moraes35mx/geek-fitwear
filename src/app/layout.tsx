@@ -22,13 +22,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'GreekFit — Wear the Sun.',
+  title: 'GreekFit — Vista o Sol.',
   description:
-    'Premium fitness wear inspired by Mediterranean light and Brazilian movement. Crafted for those who move with intention.',
-  keywords: 'premium fitness wear, legging, top, conjunto fitness, roupas fitness premium',
+    'Roupas fitness premium inspiradas na luz mediterrânea e na energia brasileira. Feitas para quem se move com intenção.',
+  keywords: 'roupas fitness premium, legging, top, conjunto fitness, moda fitness',
   openGraph: {
-    title: 'GreekFit — Wear the Sun.',
-    description: 'Mediterranean light. Brazilian energy. Apple-level precision.',
+    title: 'GreekFit — Vista o Sol.',
+    description: 'Luz mediterrânea. Energia brasileira. Precisão máxima.',
     type: 'website',
   },
 };

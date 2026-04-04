@@ -7,9 +7,9 @@ import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 
 const navLinks = [
-  { label: 'Collection', href: '/#collection' },
-  { label: 'Campaign', href: '/#campaign' },
-  { label: 'Philosophy', href: '/#philosophy' },
+  { label: 'Coleção', href: '/#collection' },
+  { label: 'Campanha', href: '/#campaign' },
+  { label: 'Filosofia', href: '/#philosophy' },
 ];
 
 function Logo({ dark = false }: { dark?: boolean }) {
@@ -85,7 +85,7 @@ export default function Header() {
                 className={`relative p-2 transition-colors ${
                   isOverHero ? 'text-[#F5F1E8]/70 hover:text-[#F5F1E8]' : 'text-[#6F6A5F] hover:text-[#1A1A1A]'
                 }`}
-                aria-label="Cart"
+                aria-label="Sacola"
               >
                 <ShoppingBag className="w-[18px] h-[18px]" strokeWidth={1.3} />
                 <AnimatePresence>

@@ -29,7 +29,7 @@ export default function CartDrawer() {
             {/* Header */}
             <div className="flex items-center justify-between px-8 py-6 border-b border-[#E6DFD2]">
               <div className="flex items-center gap-3">
-                <span className="font-serif font-light text-[#1A1A1A] text-lg italic">Your Bag</span>
+                <span className="font-serif font-light text-[#1A1A1A] text-lg italic">Sua Sacola</span>
                 {itemCount > 0 && (
                   <span className="text-[#A88F6A] text-[10px] tracking-wide">({itemCount})</span>
                 )}
@@ -44,7 +44,7 @@ export default function CartDrawer() {
               {remaining > 0 ? (
                 <>
                   <p className="text-[#6F6A5F] text-[9px] tracking-[0.2em] uppercase mb-2.5">
-                    R$ {remaining.toFixed(2).replace('.', ',')} away from free shipping
+                    Frete grátis a R$ {remaining.toFixed(2).replace('.', ',')} de distância
                   </p>
                   <div className="w-full h-px bg-[#E6DFD2]">
                     <motion.div
@@ -56,7 +56,7 @@ export default function CartDrawer() {
                 </>
               ) : (
                 <p className="text-[#A88F6A] text-[9px] tracking-[0.25em] uppercase">
-                  Free shipping unlocked
+                  Frete grátis desbloqueado!
                 </p>
               )}
             </div>
@@ -67,8 +67,8 @@ export default function CartDrawer() {
                 <div className="flex flex-col items-center justify-center h-full gap-4 py-16 text-center">
                   <ShoppingBag className="w-10 h-10 text-[#E6DFD2]" strokeWidth={1} />
                   <div>
-                    <p className="text-[#6F6A5F] text-sm font-light tracking-wide">Your bag is empty</p>
-                    <p className="text-[#A88F6A]/60 text-[10px] tracking-[0.2em] uppercase mt-1">Start exploring</p>
+                    <p className="text-[#6F6A5F] text-sm font-light tracking-wide">Sua sacola está vazia</p>
+                    <p className="text-[#A88F6A]/60 text-[10px] tracking-[0.2em] uppercase mt-1">Comece a explorar</p>
                   </div>
                 </div>
               ) : (
@@ -93,7 +93,7 @@ export default function CartDrawer() {
                       <div className="flex-1 min-w-0">
                         <p className="text-[#6F6A5F] text-[9px] tracking-[0.2em] uppercase mb-0.5">{item.product.category}</p>
                         <p className="text-[#1A1A1A] font-light text-sm tracking-wide">{item.product.name}</p>
-                        <p className="text-[#6F6A5F] text-[10px] mt-0.5">Size {item.size}</p>
+                        <p className="text-[#6F6A5F] text-[10px] mt-0.5">Tamanho {item.size}</p>
                         <p className="text-[#1A1A1A] font-light text-sm mt-2">
                           R$ {item.product.pixPrice.toFixed(2).replace('.', ',')}
                         </p>
@@ -131,13 +131,13 @@ export default function CartDrawer() {
                   </span>
                 </div>
                 <p className="text-[#6F6A5F] text-[9px] tracking-wide">
-                  or {items[0]?.product.installments.count}x · Secure checkout · Free returns
+                  ou {items[0]?.product.installments.count}x · Compra segura · Devoluções grátis
                 </p>
                 <button
                   onClick={() => console.log('Integração do Gateway aqui')}
                   className="w-full bg-[#1A1A1A] hover:bg-[#2B2B2B] text-[#F5F1E8] py-4 text-[9px] tracking-[0.35em] uppercase font-medium transition-colors"
                 >
-                  Checkout
+                  Finalizar Pedido
                 </button>
               </div>
             )}

@@ -7,17 +7,17 @@ import { useCart } from '@/context/CartContext';
 import { Product } from '@/data/products';
 
 const tagLabel: Record<string, string> = {
-  'New': 'New',
-  'Bestseller': 'Bestseller',
-  'Limited': 'Limited',
-  'Sale': 'Sale',
+  'Novo': 'Novo',
+  'Mais Vendido': 'Mais Vendido',
+  'Limitado': 'Limitado',
+  'Outlet': 'Outlet',
 };
 
 const tagStyle: Record<string, string> = {
-  'New': 'text-[#A88F6A]',
-  'Bestseller': 'text-[#1A1A1A]',
-  'Limited': 'text-[#8C7A5B]',
-  'Sale': 'text-[#6F6A5F]',
+  'Novo': 'text-[#A88F6A]',
+  'Mais Vendido': 'text-[#1A1A1A]',
+  'Limitado': 'text-[#8C7A5B]',
+  'Outlet': 'text-[#6F6A5F]',
 };
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -59,7 +59,7 @@ export default function ProductCard({ product }: { product: Product }) {
         {/* Low stock */}
         {product.stock <= 3 && (
           <span className="absolute top-3 right-3 text-[9px] tracking-[0.15em] uppercase text-[#A88F6A]">
-            {product.stock} left
+            Últimas {product.stock}
           </span>
         )}
 
@@ -69,7 +69,7 @@ export default function ProductCard({ product }: { product: Product }) {
             onClick={e => { e.preventDefault(); addItem(product, 'M'); }}
             className="w-full bg-[#F5F1E8]/90 hover:bg-[#F5F1E8] text-[#1A1A1A] py-3 text-[9px] tracking-[0.3em] uppercase font-medium transition-colors backdrop-blur-sm"
           >
-            Add to Bag
+            Adicionar à Sacola
           </button>
         </div>
       </Link>
